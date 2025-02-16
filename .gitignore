@@ -1,0 +1,5 @@
+package-lock.json
+uploads/*
+node_modules
+chave-api.txt
+.env
