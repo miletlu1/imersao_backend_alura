@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "imersao_backend_alura",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "type": "module",
   "license": "AGPL-version-3.0",
   "private": false,
@@ -13,18 +13,21 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/miletlu1/imersao_backend_alura"
   },
   "bugs": "",
   "keywords": [],
   "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+    "name": "Lucas Milet",
+    "email": "lucasmilet@protonmail.com",
+    "url": "https://github.com/miletlu1"
   },
   "contributors": [],
   "scripts": {
-    "dev": "node --watch --env-file=.env server.js",
+    "build": "tsx",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "prestart": "npm run build",
     "test": ""
   },
   "dependencies": {
@@ -34,5 +37,13 @@
     "express": "^4.21.1",
     "mongodb": "^6.10.0",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }

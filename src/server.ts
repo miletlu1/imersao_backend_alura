@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "./src/routes/postsRoutes.js";
+import routes from "./routes/postsRoutes.js";
 
 const app = express();
 app.use(express.static("uploads"))

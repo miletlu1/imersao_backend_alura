@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Application } from "express";
 import multer from "multer";
 import { listarPosts, postarNovoPost, uploadImagem, atualizarNovoPost } from "../controllers/postsController.js"; 
 import cors from "cors";
@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Define as rotas usando o objeto Express app
-const routes = (app) => {
+const routes = (app: Application) => {
   // Permite que o servidor receba mensagem com corpo em formato JSON
   app.use(express.json());
   app.use(cors(corsOptions))
